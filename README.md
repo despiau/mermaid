@@ -1,169 +1,205 @@
-Voy a crear una serie de diagramas en formato Markdown usando el lenguaje de Mermaid, cada uno representando diferentes aspectos y procesos de la compañía de limpieza SmartClinic Expert, basándome en la información proporcionada. Cada diagrama será único y abarcará una amplia gama de temas, desde el itinerario de limpieza hasta la estructura organizacional y estrategias de marketing.
+Voy a realizar las modificaciones necesarias para que todo esté en inglés y refleje la identidad de la empresa SmartCleaning Experts. Aquí están las versiones en inglés de los diagramas anteriores. Luego, crearé el logo en SVG con la animación.
 
-### 1. Itinerario de Limpieza
+### 1. Cleaning Schedule
 ```mermaid
 gantt
-    title Itinerario de Limpieza
+    title Cleaning Schedule
     dateFormat  YYYY-MM-DD
-    section Baños
-    Baño 1       :done,    des1, 2024-07-17,2024-07-17
-    Baño 2       :active,  des2, 2024-07-17, 2024-07-18
-    Baño 3       :         des3, 2024-07-18, 2024-07-19
-    Baño 4       :         des4, 2024-07-19, 2024-07-20
-    section Oficinas
-    Oficina 1    :done,    des5, 2024-07-17, 2024-07-17
-    Oficina 2    :active,  des6, 2024-07-17, 2024-07-18
-    Oficina 3    :         des7, 2024-07-18, 2024-07-19
-    Oficina 4    :         des8, 2024-07-19, 2024-07-20
-    section Áreas Comunes
-    Cocina       :done,    des9, 2024-07-17, 2024-07-17
-    Sala de Juntas:active, des10, 2024-07-17, 2024-07-18
-    Recepción    :         des11, 2024-07-18, 2024-07-19
-    Sala de Espera:        des12, 2024-07-19, 2024-07-20
+    section Bathrooms
+    Bathroom 1       :done,    des1, 2024-07-17,2024-07-17
+    Bathroom 2       :active,  des2, 2024-07-17, 2024-07-18
+    Bathroom 3       :         des3, 2024-07-18, 2024-07-19
+    Bathroom 4       :         des4, 2024-07-19, 2024-07-20
+    section Offices
+    Office 1    :done,    des5, 2024-07-17, 2024-07-17
+    Office 2    :active,  des6, 2024-07-17, 2024-07-18
+    Office 3    :         des7, 2024-07-18, 2024-07-19
+    Office 4    :         des8, 2024-07-19, 2024-07-20
+    section Common Areas
+    Kitchen       :done,    des9, 2024-07-17, 2024-07-17
+    Meeting Room  :active, des10, 2024-07-17, 2024-07-18
+    Reception     :         des11, 2024-07-18, 2024-07-19
+    Waiting Area  :         des12, 2024-07-19, 2024-07-20
 ```
 
-### 2. Organigrama de la Empresa
+### 2. Company Org Chart
 ```mermaid
 graph TD
-    A[CEO] --> B[Director de Operaciones]
-    A --> C[Director de Marketing]
-    A --> D[Director de Finanzas]
-    B --> E[Gerente de Limpieza]
-    B --> F[Gerente de Logística]
-    C --> G[Coordinador de Publicidad]
-    C --> H[Coordinador de Redes Sociales]
-    D --> I[Contador]
-    D --> J[Analista Financiero]
+    A[CEO] --> B[Operations Director]
+    A --> C[Marketing Director]
+    A --> D[Finance Director]
+    B --> E[Cleaning Manager]
+    B --> F[Logistics Manager]
+    C --> G[Advertising Coordinator]
+    C --> H[Social Media Coordinator]
+    D --> I[Accountant]
+    D --> J[Financial Analyst]
 ```
 
-### 3. Proceso de Limpieza de Oficinas
+### 3. Office Cleaning Process
 ```mermaid
 flowchart LR
-    A[Inicio] --> B[Revisión de la Oficina]
-    B --> C[Planificación del Trabajo]
-    C --> D[Limpieza General]
-    D --> E[Limpieza Detallada]
-    E --> F[Revisión Final]
-    F --> G[Entrega de Informe]
+    A[Start] --> B[Office Inspection]
+    B --> C[Work Planning]
+    C --> D[General Cleaning]
+    D --> E[Detailed Cleaning]
+    E --> F[Final Inspection]
+    F --> G[Report Delivery]
 ```
 
-### 4. Estrategia de Marketing en Redes Sociales
+### 4. Social Media Marketing Strategy
 ```mermaid
 mindmap
-  root((Estrategia de Marketing))
+  root((Marketing Strategy))
     Social Media
       Facebook
       Twitter
       Instagram
       LinkedIn
       TikTok
-    Publicidad Pagada
+    Paid Advertising
       Google Ads
       Facebook Ads
       Instagram Ads
       LinkedIn Ads
-    Contenido
+    Content
       Blog
       Videos
-      Infografías
-      Artículos
-      Noticias
+      Infographics
+      Articles
+      News
 ```
 
-### 5. Mapa de Ubicación de Oficinas
+### 5. Office Location Map
 ```mermaid
 erDiagram
-    Oficina ||--|| Baño: tiene
-    Oficina {
+    Office ||--|| Bathroom: has
+    Office {
       int id
-      string nombre
-      string ubicacion
+      string name
+      string location
     }
-    Baño {
+    Bathroom {
       int id
-      string nombre
-      string ubicacion
+      string name
+      string location
     }
-    Oficina ||--|| Cocina: tiene
-    Cocina {
+    Office ||--|| Kitchen: has
+    Kitchen {
       int id
-      string nombre
-      string ubicacion
+      string name
+      string location
     }
-    Oficina ||--|| SalaJuntas: tiene
-    SalaJuntas {
+    Office ||--|| MeetingRoom: has
+    MeetingRoom {
       int id
-      string nombre
-      string ubicacion
+      string name
+      string location
     }
 ```
 
-### 6. Proceso de Facturación
+### 6. Billing Process
 ```mermaid
 sequenceDiagram
-    Cliente->>+SmartClinic: Solicita Cotización
-    SmartClinic->>+Cliente: Envía Cotización
-    Cliente->>+SmartClinic: Acepta Cotización
-    SmartClinic->>+Cliente: Envía Factura
-    Cliente->>+Banco: Realiza Pago
-    Banco->>+SmartClinic: Confirma Pago
-    SmartClinic->>+Cliente: Confirma Servicio
+    Client->>+SmartCleaning: Request Quotation
+    SmartCleaning->>+Client: Send Quotation
+    Client->>+SmartCleaning: Accept Quotation
+    SmartCleaning->>+Client: Send Invoice
+    Client->>+Bank: Make Payment
+    Bank->>+SmartCleaning: Confirm Payment
+    SmartCleaning->>+Client: Confirm Service
 ```
 
-### 7. Análisis de Costos
+### 7. Cost Analysis
 ```mermaid
 pie
-    title Análisis de Costos
-    "Salarios": 45
-    "Materiales de Limpieza": 25
-    "Transporte": 15
-    "Publicidad": 10
-    "Otros": 5
+    title Cost Analysis
+    "Salaries": 45
+    "Cleaning Materials": 25
+    "Transportation": 15
+    "Advertising": 10
+    "Others": 5
 ```
 
-### 8. Certificaciones y Licencias
+### 8. Certifications and Licenses
 ```mermaid
 stateDiagram-v2
-    [*] --> Aplicación
-    Aplicación --> Revisión
-    Revisión --> Aprobación
-    Aprobación --> Emisión
-    Emisión --> [*]
-    Emisión --> Renovación
-    Renovación --> [*]
+    [*] --> Application
+    Application --> Review
+    Review --> Approval
+    Approval --> Issuance
+    Issuance --> [*]
+    Issuance --> Renewal
+    Renewal --> [*]
 ```
 
-### 9. Base de Datos de Clientes
+### 9. Customer Database
 ```mermaid
 classDiagram
-    class Cliente {
+    class Client {
       +int id
-      +string nombre
-      +string direccion
-      +string telefono
+      +string name
+      +string address
+      +string phone
       +string email
     }
-    class Factura {
+    class Invoice {
       +int id
-      +date fecha
-      +float monto
-      +int clienteId
+      +date date
+      +float amount
+      +int clientId
     }
-    Cliente "1" -- "0..*" Factura: genera
+    Client "1" -- "0..*" Invoice: generates
 ```
 
-### 10. Feedback del Cliente
+### 10. Customer Feedback
 ```mermaid
 journey
-    title Feedback del Cliente
-    section Experiencia del Cliente
-      Satisfecho: 5: Cliente
-      Neutral: 3: Cliente
-      Insatisfecho: 1: Cliente
-    section Resolución de Problemas
-      Contacto Inicial: 5: SmartClinic
-      Solución Propuesta: 3: SmartClinic
-      Implementación de Solución: 1: SmartClinic
+    title Customer Feedback
+    section Customer Experience
+      Satisfied: 5: Client
+      Neutral: 3: Client
+      Unsatisfied: 1: Client
+    section Problem Resolution
+      Initial Contact: 5: SmartCleaning
+      Proposed Solution: 3: SmartCleaning
+      Solution Implementation: 1: SmartCleaning
 ```
 
-Estos son solo los primeros diez diagramas. Continuaré generando más diagramas únicos para cubrir todas las áreas necesarias, como finanzas, marketing, operaciones y más. Cada diagrama está diseñado para ayudar a visualizar y organizar diferentes aspectos del negocio de limpieza SmartClinic Expert.
+Voy a proceder a diseñar el logo en SVG y agregar la animación solicitada.
+
+### Logo en SVG con Animación
+```svg
+<svg width="200" height="200" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background -->
+  <rect width="100%" height="100%" fill="#f06" />
+
+  <!-- Bubbles -->
+  <circle cx="60" cy="60" r="30" fill="#fff" opacity="0.7">
+    <animate attributeName="r" from="30" to="35" dur="1s" repeatCount="indefinite"/>
+  </circle>
+  <circle cx="120" cy="40" r="15" fill="#fff" opacity="0.7">
+    <animate attributeName="r" from="15" to="20" dur="1s" repeatCount="indefinite"/>
+  </circle>
+  <circle cx="30" cy="100" r="10" fill="#fff" opacity="0.7">
+    <animate attributeName="r" from="10" to="15" dur="1s" repeatCount="indefinite"/>
+  </circle>
+  <circle cx="90" cy="130" r="20" fill="#fff" opacity="0.7">
+    <animate attributeName="r" from="20" to="25" dur="1s" repeatCount="indefinite"/>
+  </circle>
+
+  <!-- Sparkles -->
+  <polygon points="60,10 70,30 50,30" fill="#fff">
+    <animateTransform attributeName="transform" type="rotate" from="0 60 20" to="360 60 20" dur="2s" repeatCount="indefinite"/>
+  </polygon>
+  <polygon points="100,20 110,40 90,40" fill="#fff">
+    <animateTransform attributeName="transform" type="rotate" from="0 100 30" to="360 100 30" dur="2s" repeatCount="indefinite"/>
+  </polygon>
+
+  <!-- Text -->
+  <text x="50%" y="150" font-size="20" fill="#fff" text-anchor="middle">SmartCleaning</text>
+  <text x="50%" y="170" font-size="16" fill="#fff" text-anchor="middle">Experts</text>
+</svg>
+```
+
+Este SVG incluye burbujas y sparkles animados, con el texto "SmartCleaning Experts" debajo. Puedes integrar este código en tu página web para ver la animación en acción.
