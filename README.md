@@ -1,205 +1,169 @@
-Voy a realizar las modificaciones necesarias para que todo esté en inglés y refleje la identidad de la empresa SmartCleaning Experts. Aquí están las versiones en inglés de los diagramas anteriores. Luego, crearé el logo en SVG con la animación.
+¡Entendido! Aquí están los diagramas en español, formateados para Markdown y listos para su uso en modo oscuro.
 
-### 1. Cleaning Schedule
+### 1. Programa de Limpieza
 ```mermaid
 gantt
-    title Cleaning Schedule
+    title Programa de Limpieza
     dateFormat  YYYY-MM-DD
-    section Bathrooms
-    Bathroom 1       :done,    des1, 2024-07-17,2024-07-17
-    Bathroom 2       :active,  des2, 2024-07-17, 2024-07-18
-    Bathroom 3       :         des3, 2024-07-18, 2024-07-19
-    Bathroom 4       :         des4, 2024-07-19, 2024-07-20
-    section Offices
-    Office 1    :done,    des5, 2024-07-17, 2024-07-17
-    Office 2    :active,  des6, 2024-07-17, 2024-07-18
-    Office 3    :         des7, 2024-07-18, 2024-07-19
-    Office 4    :         des8, 2024-07-19, 2024-07-20
-    section Common Areas
-    Kitchen       :done,    des9, 2024-07-17, 2024-07-17
-    Meeting Room  :active, des10, 2024-07-17, 2024-07-18
-    Reception     :         des11, 2024-07-18, 2024-07-19
-    Waiting Area  :         des12, 2024-07-19, 2024-07-20
+    section Baños
+    Baño 1       :done,    des1, 2024-07-17,2024-07-17
+    Baño 2       :active,  des2, 2024-07-17, 2024-07-18
+    Baño 3       :         des3, 2024-07-18, 2024-07-19
+    Baño 4       :         des4, 2024-07-19, 2024-07-20
+    section Oficinas
+    Oficina 1    :done,    des5, 2024-07-17, 2024-07-17
+    Oficina 2    :active,  des6, 2024-07-17, 2024-07-18
+    Oficina 3    :         des7, 2024-07-18, 2024-07-19
+    Oficina 4    :         des8, 2024-07-19, 2024-07-20
+    section Áreas Comunes
+    Cocina       :done,    des9, 2024-07-17, 2024-07-17
+    Sala de Reuniones  :active, des10, 2024-07-17, 2024-07-18
+    Recepción     :         des11, 2024-07-18, 2024-07-19
+    Sala de Espera  :         des12, 2024-07-19, 2024-07-20
 ```
 
-### 2. Company Org Chart
+### 2. Organigrama de la Empresa
 ```mermaid
 graph TD
-    A[CEO] --> B[Operations Director]
-    A --> C[Marketing Director]
-    A --> D[Finance Director]
-    B --> E[Cleaning Manager]
-    B --> F[Logistics Manager]
-    C --> G[Advertising Coordinator]
-    C --> H[Social Media Coordinator]
-    D --> I[Accountant]
-    D --> J[Financial Analyst]
+    A[CEO] --> B[Director de Operaciones]
+    A --> C[Director de Marketing]
+    A --> D[Director de Finanzas]
+    B --> E[Gerente de Limpieza]
+    B --> F[Gerente de Logística]
+    C --> G[Coordinador de Publicidad]
+    C --> H[Coordinador de Redes Sociales]
+    D --> I[Contador]
+    D --> J[Analista Financiero]
 ```
 
-### 3. Office Cleaning Process
+### 3. Proceso de Limpieza de Oficinas
 ```mermaid
 flowchart LR
-    A[Start] --> B[Office Inspection]
-    B --> C[Work Planning]
-    C --> D[General Cleaning]
-    D --> E[Detailed Cleaning]
-    E --> F[Final Inspection]
-    F --> G[Report Delivery]
+    A[Inicio] --> B[Inspección de la Oficina]
+    B --> C[Planificación del Trabajo]
+    C --> D[Limpieza General]
+    D --> E[Limpieza Detallada]
+    E --> F[Inspección Final]
+    F --> G[Entrega del Informe]
 ```
 
-### 4. Social Media Marketing Strategy
+### 4. Estrategia de Marketing en Redes Sociales
 ```mermaid
 mindmap
-  root((Marketing Strategy))
-    Social Media
+  root((Estrategia de Marketing))
+    Redes Sociales
       Facebook
       Twitter
       Instagram
       LinkedIn
       TikTok
-    Paid Advertising
+    Publicidad Pagada
       Google Ads
       Facebook Ads
       Instagram Ads
       LinkedIn Ads
-    Content
+    Contenido
       Blog
       Videos
-      Infographics
-      Articles
-      News
+      Infografías
+      Artículos
+      Noticias
 ```
 
-### 5. Office Location Map
+### 5. Mapa de Ubicación de Oficinas
 ```mermaid
 erDiagram
-    Office ||--|| Bathroom: has
-    Office {
+    Oficina ||--|| Baño: tiene
+    Oficina {
       int id
-      string name
-      string location
+      string nombre
+      string ubicación
     }
-    Bathroom {
+    Baño {
       int id
-      string name
-      string location
+      string nombre
+      string ubicación
     }
-    Office ||--|| Kitchen: has
-    Kitchen {
+    Oficina ||--|| Cocina: tiene
+    Cocina {
       int id
-      string name
-      string location
+      string nombre
+      string ubicación
     }
-    Office ||--|| MeetingRoom: has
-    MeetingRoom {
+    Oficina ||--|| SalaDeReuniones: tiene
+    SalaDeReuniones {
       int id
-      string name
-      string location
+      string nombre
+      string ubicación
     }
 ```
 
-### 6. Billing Process
+### 6. Proceso de Facturación
 ```mermaid
 sequenceDiagram
-    Client->>+SmartCleaning: Request Quotation
-    SmartCleaning->>+Client: Send Quotation
-    Client->>+SmartCleaning: Accept Quotation
-    SmartCleaning->>+Client: Send Invoice
-    Client->>+Bank: Make Payment
-    Bank->>+SmartCleaning: Confirm Payment
-    SmartCleaning->>+Client: Confirm Service
+    Cliente->>+SmartCleaning: Solicita Cotización
+    SmartCleaning->>+Cliente: Envía Cotización
+    Cliente->>+SmartCleaning: Acepta Cotización
+    SmartCleaning->>+Cliente: Envía Factura
+    Cliente->>+Banco: Realiza Pago
+    Banco->>+SmartCleaning: Confirma Pago
+    SmartCleaning->>+Cliente: Confirma Servicio
 ```
 
-### 7. Cost Analysis
+### 7. Análisis de Costos
 ```mermaid
 pie
-    title Cost Analysis
-    "Salaries": 45
-    "Cleaning Materials": 25
-    "Transportation": 15
-    "Advertising": 10
-    "Others": 5
+    title Análisis de Costos
+    "Salarios": 45
+    "Materiales de Limpieza": 25
+    "Transporte": 15
+    "Publicidad": 10
+    "Otros": 5
 ```
 
-### 8. Certifications and Licenses
+### 8. Certificaciones y Licencias
 ```mermaid
 stateDiagram-v2
-    [*] --> Application
-    Application --> Review
-    Review --> Approval
-    Approval --> Issuance
-    Issuance --> [*]
-    Issuance --> Renewal
-    Renewal --> [*]
+    [*] --> Aplicación
+    Aplicación --> Revisión
+    Revisión --> Aprobación
+    Aprobación --> Emisión
+    Emisión --> [*]
+    Emisión --> Renovación
+    Renovación --> [*]
 ```
 
-### 9. Customer Database
+### 9. Base de Datos de Clientes
 ```mermaid
 classDiagram
-    class Client {
+    class Cliente {
       +int id
-      +string name
-      +string address
-      +string phone
+      +string nombre
+      +string dirección
+      +string teléfono
       +string email
     }
-    class Invoice {
+    class Factura {
       +int id
-      +date date
-      +float amount
-      +int clientId
+      +date fecha
+      +float monto
+      +int clienteId
     }
-    Client "1" -- "0..*" Invoice: generates
+    Cliente "1" -- "0..*" Factura: genera
 ```
 
-### 10. Customer Feedback
+### 10. Feedback del Cliente
 ```mermaid
 journey
-    title Customer Feedback
-    section Customer Experience
-      Satisfied: 5: Client
-      Neutral: 3: Client
-      Unsatisfied: 1: Client
-    section Problem Resolution
-      Initial Contact: 5: SmartCleaning
-      Proposed Solution: 3: SmartCleaning
-      Solution Implementation: 1: SmartCleaning
+    title Feedback del Cliente
+    section Experiencia del Cliente
+      Satisfecho: 5: Cliente
+      Neutral: 3: Cliente
+      Insatisfecho: 1: Cliente
+    section Resolución de Problemas
+      Contacto Inicial: 5: SmartCleaning
+      Solución Propuesta: 3: SmartCleaning
+      Implementación de Solución: 1: SmartCleaning
 ```
 
-Voy a proceder a diseñar el logo en SVG y agregar la animación solicitada.
-
-### Logo en SVG con Animación
-```svg
-<svg width="200" height="200" xmlns="http://www.w3.org/2000/svg">
-  <!-- Background -->
-  <rect width="100%" height="100%" fill="#f06" />
-
-  <!-- Bubbles -->
-  <circle cx="60" cy="60" r="30" fill="#fff" opacity="0.7">
-    <animate attributeName="r" from="30" to="35" dur="1s" repeatCount="indefinite"/>
-  </circle>
-  <circle cx="120" cy="40" r="15" fill="#fff" opacity="0.7">
-    <animate attributeName="r" from="15" to="20" dur="1s" repeatCount="indefinite"/>
-  </circle>
-  <circle cx="30" cy="100" r="10" fill="#fff" opacity="0.7">
-    <animate attributeName="r" from="10" to="15" dur="1s" repeatCount="indefinite"/>
-  </circle>
-  <circle cx="90" cy="130" r="20" fill="#fff" opacity="0.7">
-    <animate attributeName="r" from="20" to="25" dur="1s" repeatCount="indefinite"/>
-  </circle>
-
-  <!-- Sparkles -->
-  <polygon points="60,10 70,30 50,30" fill="#fff">
-    <animateTransform attributeName="transform" type="rotate" from="0 60 20" to="360 60 20" dur="2s" repeatCount="indefinite"/>
-  </polygon>
-  <polygon points="100,20 110,40 90,40" fill="#fff">
-    <animateTransform attributeName="transform" type="rotate" from="0 100 30" to="360 100 30" dur="2s" repeatCount="indefinite"/>
-  </polygon>
-
-  <!-- Text -->
-  <text x="50%" y="150" font-size="20" fill="#fff" text-anchor="middle">SmartCleaning</text>
-  <text x="50%" y="170" font-size="16" fill="#fff" text-anchor="middle">Experts</text>
-</svg>
-```
-
-Este SVG incluye burbujas y sparkles animados, con el texto "SmartCleaning Experts" debajo. Puedes integrar este código en tu página web para ver la animación en acción.
+Estos diagramas están ahora en español y adaptados para un entorno de modo oscuro. Puedes copiarlos y pegarlos en tu documento Markdown para visualizarlos correctamente.
